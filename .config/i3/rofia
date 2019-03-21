@@ -24,7 +24,7 @@ rofi -show drun -sidebar-mode \
 -width 60 \
 -location 0 \
 -columns 3 \
--font "Iosevka 8" \
+-font "Iosevka 12" \
 -color-enabled true \
 -color-window "$BACKGROUND,$WHITE,$BACKGROUND" \
 -color-normal "$BACKGROUND,$FOREGROUND,$BACKGROUND,$BACKGROUND,$BLUE" \
