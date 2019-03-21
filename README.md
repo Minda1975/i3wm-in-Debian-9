@@ -22,4 +22,4 @@ Screens:
 ![Screenshot](screen_2.png?raw=true "Bussy")
 ![Screenshot](screen_3.png?raw=true "Rofi_Power")
 ![Screenshot](screen_4.png?raw=true "Rofi_Power")
-![Screenshot](screen_5.png?raw=true "Screen Lock")
+
