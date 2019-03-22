@@ -188,6 +188,8 @@ bindsym $mod+F2 exec --no-startup-id /usr/bin/firefox
 bindsym $mod+F3 exec --no-startup-id /usr/bin/thunar
 bindsym $mod+F4 exec --no-startup-id /usr/bin/smplayer
 bindsym $mod+F5 exec --no-startup-id /usr/bin/audacious
+bindsym $mod+F6 exec --no-startup-id ~/.config/i3/dmenu-emoji.sh
+bindsym $mod+F7 exec --no-startup-id ~/.config/i3/mpdmenu
 bindsym $mod+Pause exec --no-startup-id /home/mindaugas/.config/rofi-power/rofi-power "i3-msg exit"
 
 #Autostart
@@ -195,6 +197,6 @@ exec --no-startup-id fbxkb &
 exec --no-startup-id setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
 exec --no-startup-id xsettingsd &
 exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
-exec --no-startup-id feh --bg-scale /home/mindaugas/Pictures/6.jpg
+exec --no-startup-id feh --bg-scale /home/mindaugas/Pictures/9.jpg
 #Floating
 for_window [class="Viewnior"] floating enable

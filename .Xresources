@@ -1,4 +1,4 @@
-#include ".xrdb/color/nord"
+#include ".xrdb/color/baskerville-ivory-dark"
 #include ".xrdb/rofi/nord"
 
 URxvt.font: xft:InconsolataGo Nerd Font Mono:size=13 :antialias=true:autohint=false
