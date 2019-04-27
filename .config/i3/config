@@ -36,7 +36,7 @@ bindsym $mod+Return exec --no-startup-id urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id ~/.config/i3/rofia
+bindsym $mod+d exec --no-startup-id dmenu_run -nb '#222D31' -sf '#F9FAF9' -sb '#16A085' -nf '#F9FAF9' 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -92,6 +92,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+
 #set $WS1 
 #set $WS2 
 #set $WS3 
@@ -135,7 +136,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -170,19 +171,32 @@ bar {
         position top
         font xft:InconsolataGo Nerd Font, FontAwesome 12
 colors {
-     background #333333
-     statusline #2E9AFE
-     separator #00000
+     background #222D31
+     statusline #F9FAF9
+     separator  #454947
+
      #Bord #Back #Text
-     focused_workspace #2E9AFE #2E9AFE #000000
-     active_workspace #333333 #3333333 #7F7F7F
-     inactive_workspace #333333 #333333 #7F7F7F
-     urgent_workspace #000000 #000000 #900000
+     focused_workspace  #F9FAF9 #16a085 #292F34
+     active_workspace   #595B5B #353836 #FDF6E3
+     inactive_workspace #595B5B #222D31 #EEE8D5
+     binding_mode       #16a085 #2C2C2C #F9FAF9
+     urgent_workspace   #16a085 #FDF6E3 #E5201D
+
    }
 }
 
+# Theme colors
+# class                   border  backgr. text    indic.   child_border
+  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+
+  client.background       #2B2C2B
+
 #Shortcuts
-bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/ranger
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -e /usr/bin/mc
 bindsym $mod+F1 exec --no-startup-id ~/.config/i3/i3-scrot.conf
 bindsym $mod+F2 exec --no-startup-id /usr/bin/firefox
 bindsym $mod+F3 exec --no-startup-id /usr/bin/thunar
@@ -193,10 +207,10 @@ bindsym $mod+F7 exec --no-startup-id ~/.config/i3/mpdmenu
 bindsym $mod+Pause exec --no-startup-id /home/mindaugas/.config/rofi-power/rofi-power "i3-msg exit"
 
 #Autostart
-exec --no-startup-id fbxkb &
+exec --no-startup-id fbxkb 
+exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id setxkbmap -layout "us,lt,ru" -option "grp:ctrl_shift_toggle"
-exec --no-startup-id xsettingsd &
 exec --no-startup-id xautolock -time 10 -locker 'i3lock' &
-exec --no-startup-id feh --bg-scale /home/mindaugas/Pictures/9.jpg
+exec --no-startup-id feh --bg-scale /home/mindaugas/Pictures/manjaro-adapta-maia-1.jpg
 #Floating
 for_window [class="Viewnior"] floating enable

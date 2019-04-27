@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Equilux-compact
+Comment=A Material Design theme with Equilux color-palette
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Equilux-compact
+MetacityTheme=Equilux-compact
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24
