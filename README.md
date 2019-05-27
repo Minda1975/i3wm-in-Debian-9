@@ -25,3 +25,5 @@ Screens:
 ![Screenshot](screen_3.png?raw=true "CLI")
 ![Screenshot](screen_4.png?raw=true "Colors")
 ![Screenshot](screen_5.png?raw=true "Thunar")
+
+![Please do not theme this app](https://stopthemingmy.app/badge.svg)
